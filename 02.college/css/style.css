@@ -1,7 +1,9 @@
 @charset "utf-8";
 
 /*header*/
+#hearder{height: 300px;_background-color:pink;}
 .util_menu_wrap{background: #0044AF;}
+.util_menu{background: #0044AF;}
 .util_menu{width: 1200px;margin: 0 auto;}
 .util_menu .left{float: left;}
 .util_menu .right{float:right;}
@@ -9,7 +11,7 @@
 .util_menu .left li{float: left;width: 120px;margin-right: 5px;}
 .util_menu .left li a{
 	display: block; line-height: 40px;
-	text-align: center;background-color: #00163B;
+	text-align: center;background: #00163B;
 	color: #fff;font-weight: bold;
 
 }
@@ -18,7 +20,7 @@
 .util_menu .left li a:hover{background: #fff;color: #333;}
 
 .util_menu .right li{float: left;color: #fff;font-size: 0.8em;}
-.util_menn .right li a{
+.util_menu .right li a{
 	display: block;line-height: 40px; padding: 0 10px;
 	color: #fff;
 }
@@ -27,6 +29,73 @@
 	width: 20px;height: 20px;line-height: 20px;padding: 0;
 	text-align: center;margin-right: 2px;margin-top: 10px;
 }
-.util_menu .right li:first-child{line-height: 20px; padding-right: 10px;}
+.util_menu .right li:first-child{line-height: 40px; padding-right: 10px;}
 /*.util_menu .right li:nth-child(2){padding-top: 10px;}*/
 .util_menu .right li:last-child a{padding-right: 0;}
+
+
+
+	/*GNB */
+.gnb{
+	background-color: #fff;
+	width: 1200px;height: 120px;margin: 0 auto;
+
+}
+.gnb .logo {width: 600px;}
+.gnb .logo img{_width: 200px;
+	float: left;
+
+}
+
+
+/*GNB menu01*/
+.gnb .menu{ 
+	float: right;
+	margin-top: 20px;
+}
+.gnb .menu li{float: left;
+ 
+	 width:130px; box-sizing: border-box; 
+	_border-right: 1px solid #fff;		
+	}
+	
+
+	
+.gnb .menu li a{
+	display: block;line-height: 55px; text-align: center ; color: #000;
+	font-weight: bold;
+	cursor: pointer;
+	}
+
+.gnb .menu li:hover a{color:#1d5da4;}
+.gnb .menu img{
+	float: right;
+	}
+
+.gnb .menu li:nth-child(6){margin-right: -2px;}
+.gnb .menu li:nth-child(7){width: 47px;}
+}
+
+
+/* contents */
+#contents{
+	height:1300px;/*나중에높이값 삭제*/
+	background-image:url(../images/bg_dot.gif), url(../images/main_bg.jpg);
+	background-repeat:repeat, no-repeat;
+	background-position: center;
+	background-size: auto,cover;
+	padding-bottom: 100px;
+
+} 
+#contents .title{width: 1200px;height: 260px;background: violet;margin: 0 auto;} /*height뺴기*/
+#contents .container{width: 1200px;margin: 0 auto;background: #fff;}
+#contents .container>ul>li{float: left;width: 25%;height: 225px;}
+#contents .container>ul>li:nth-child(2n){background: pink;} /*2n짝수에 색깔, 홀수는 2n+1*/
+#contents .container>ul>li:nth-child(1){width: 75%;height:450px;background: gray;}
+#contents .container>ul>li:nth-child(2){height: 450px;}
+#contents .container>ul>li:nth-child(3){}
+#contents .container>ul>li:nth-child(4){}
+#contents .container>ul>li:nth-child(5){}
+#contents .container>ul>li:nth-child(6){}
+#contents .container>ul>li:nth-child(7){}
+#contents .container>ul>li:nth-child(8){width: 75%;}
