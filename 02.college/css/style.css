@@ -85,12 +85,12 @@ section .txt{
 	width:700px;
 	float: left;
 	color: #fff;
-	margin-top: 30px;
+	margin-top: 40px;
 	_border: 1px solid #000;
 
 }
-section .txt h1{font-size: 50px;}
-section .txt h3{font-size: 30px;}
+section .txt h1{font-size: 50px;padding-top;}
+section .txt p{font-size: 35px;padding-top: 10px;word-spacing: 12px;font-weight:lighter;}
 
 section .icon {padding-top: 10px;}
 section .icon ul{width: 500px;float: right;
@@ -98,17 +98,16 @@ section .icon ul{width: 500px;float: right;
 	margin: 0 auto;
 	}
 section .icon li{
-	width: 110px;
-	float: right;
+	width: 125px;
+	float: left;
 	margin-top: 30px;
 	text-align: center;
-	margin: 0 auto;
 	margin-bottom: 30px;
 	
 }
 section .icon a{display: block;color: #fff;}
-section .icon p{font-size: 12px;}
-section .icon img{display: block;}
+section .icon p{font-size: 13px;text-align: center;}
+section .icon img{display: block;margin: 0 auto; margin-bottom: 10px;}
 
 
 
@@ -125,38 +124,121 @@ section .icon img{display: block;}
 #contents .container{width: 1200px;margin: 0 auto;background: #fff;}
 #contents .container>ul>li{float: left;width: 25%;height: 225px;}
 #contents .container>ul>li:nth-child(2n){_background: pink;} /*2n짝수에 색깔, 홀수는 2n+1*/
-#contents .container>ul>li:nth-child(1){width: 75%;height:450px;background: gray;}
+#contents .container>ul>li:nth-child(1){width: 75%;height:450px;_background: gray;}
 #contents .container>ul>li:nth-child(2){width: 25%;height: 450px;background-image: url(../images/bg03.png);}
-#contents .container>ul>li:nth-child(3){}
-#contents .container>ul>li:nth-child(4){}
+#contents .container>ul>li:nth-child(3){background: #00163b}
+#contents .container>ul>li:nth-child(4){background-color:#1651b7;background-image: url(../images/bg04.png);}
 #contents .container>ul>li:nth-child(5){}
-#contents .container>ul>li:nth-child(6){}
-#contents .container>ul>li:nth-child(7){}
-#contents .container>ul>li:nth-child(8){width: 75%;}
+#contents .container>ul>li:nth-child(6){background-image: url(../images/bg05.png);background-size: cover;}
+#contents .container>ul>li:nth-child(7){background-image: url(../images/bg06.png);background-size: cover;}
+#contents .container>ul>li:nth-child(8){width: 75%;overflow: hidden;}
 
 
 /*컨텐츠01*/
-.container .slider{width: 100%;margin: 0 auto;}
+.container .slider{position:relative;}
 .container .slider li {}
 .container .slider li img{/*width: 900px;height: 450px;*/}
 
 .container .slider .sliderTxt{
-	position: absolute;top: 50px;left:50px;
+	position: absolute;top: 50px;left:70px;
 	width: 400px;
 }
 	
-.container .slider .sliderTxt p{font-size: 50px;color: blue;margin-bottom: 20px;font-weight: bold;}
+.container .slider .sliderTxt p{font-size: 50px;color: #0144af; margin-bottom: 40px;}
+.container .slider .sliderTxt p span{font-weight: bold;}
 .container .slider .sliderTxt a{
-		display: block;width: 200px;height: 40px;
-		line-height: 40px;text-align: center;
-		border: 1px solid #fff;background: blue;
-		font-weight:bold;
+		display: block;width: 200px;height: 50px;
+		line-height: 50px;text-align: center;
+		border: 1px solid #fff;background: #00163b;
+		font-weight:bold; color: #fff;font-size: 18px;
 	}
 .container .slider .sliderTxt a:hover{
-		background: #000; color: #fff;
+		background: #1651b7; color: #fff;
 	}
 
 
 /*컨텐츠02*/
 .container .cont02 ul{}
-.container .cont02 li{}
+.container .cont02 .cont02_txt p{font-size: 18px;color: #fff; margin-bottom: 30px;padding-top: 50px;margin-left: 50px;font-weight: lighter;}
+.container .cont02 .cont02_txt span{font-size: 35px;}
+.container .cont02 .cont02_txt span.bold{font-weight: bold;}
+.container .cont02 .cont02_txt a{
+		display: block;width: 200px;height: 50px;
+		line-height: 50px;text-align: center;
+		_border: 1px solid #fff;background:rgba(0,0,0,0.6);
+		font-weight:bold; margin: 0 auto;color:#fff;
+		font-size: 18px;
+}
+.container .cont02 .cont02_txt a:hover{
+		_background: #000; color:#fff ;
+		background: #0144af;
+	}
+
+
+/*컨텐츠03*/
+.container .cont03 p{font-size: 30px;font-weight: bold; color: #fff;margin: 10px 10px 20px 10px;}
+.container .cont03 img{display: block;margin: 10px auto;}
+.container .cont03 li{width: 100px;float: left;text-align: center;}
+.container .cont03 li p{font: 1em sans-serif;}
+
+/*컨텐츠04*/
+.container .cont04 p{font-size: 30px;font-weight: bold; color: #fff;margin: 10px 10px 20px 10px;}
+.container .cont04 p.noti_title{border-bottom: 2px solid #ccc;padding-bottom: 20px;}
+.container .cont04 li p{font: 0.8em sans-serif;color: #fff;margin: 10px 10px;}
+.container .cont04 li span{float: right;}
+
+/*컨텐츠05*/
+.container .cont05 p{font-size: 30px;font-weight: bold; color: #000;margin:10px 10px 20px 10px;}
+.container .cont05 li.news_img{float: left;margin-left: 10px;}
+.container .cont05 div.news_right{float: right;padding-right:15px;}
+.container .cont05 .news_txt p{width: 140px;height: 100px;margin: 0px auto;
+					_border: 1px solid #000;
+					font: 0.8em sans-serif;color: #000;
+					_white-space: nowrap;
+					text-overflow: ellipsis;
+					_overflow: hidden;
+					_text-align: justify;
+					line-height:21px;	
+					}
+.container .cont05 li.news_sns img{margin-top: 10px;}	
+
+/*컨텐츠06*/
+.container .cont06{position: relative;}
+.container .cont06 button{position: absolute; bottom: 0;
+	width: 300px;height: 55px;background: rgba(0, 0, 0, 0.7);
+		color: #fff;
+		cursor: pointer;
+		font: 1.2em sans-serif;transition: 0.3s;
+	}
+.container .cont06 button:hover{width: 300px;height: 230px;
+		background: rgba(0, 0, 0, 0.7);
+		color: #fff;text-align: center;
+
+
+	}
+
+/*컨텐츠07*/
+.container .cont07{position: relative;width: 300px;}
+.container .cont07 li{}
+.container .cont07 a{display: block;position: absolute;top: 35%;left: 35%;
+					width: 80px;height: 80px;
+					border: 0px solid #fff;	
+					font-size: 40px;color: #fff;	
+					border-radius: 5840px; text-align: center;
+					background: rgba(0, 0, 0, 0.7);
+					line-height: 70px; text-indent: 10px;
+					margin: 0 auto;
+						}
+
+/*컨텐츠08*/
+.container .cont08{position: relative;}
+.container .cont08 .slider02 li:nth-child(2) #book{background: blue;opacity:0.8}
+.container .cont08 .slider02 li:nth-child(3) #book{background: black;opacity:0.8}
+.container .cont08 .slider02 .sliderTxt02{position: absolute;top: 30px;left:30px;}
+.container .cont08 .slider02 .sliderTxt02 p{font-size: 28px;color: #ef3d31;margin-bottom: 25px}
+.container .cont08 .slider02 .sliderTxt02 p span{font-size: 40px;color: #ef3d31;font-weight: bold;letter-spacing: 5px;}
+.container .cont08 .slider02 .sliderTxt02 #book{width: 200px;height: 50px;color: #fff;
+											display: block;border: 0px solid #000;background: #ef3d31;
+											text-align: center;font-weight: bold;line-height: 50px;
+											opacity:0.8;
+										}
