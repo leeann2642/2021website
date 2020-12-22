@@ -112,7 +112,7 @@ section .icon img{display: block;margin: 0 auto; margin-bottom: 10px;}
 
 
 #contents{
-	height:1300px;/*나중에높이값 삭제*/
+	_height:1300px;/*나중에높이값 삭제*/
 	background-image:url(../images/bg_dot.gif), url(../images/main_bg.jpg);
 	background-repeat:repeat, no-repeat;
 	background-position: center;
@@ -133,6 +133,8 @@ section .icon img{display: block;margin: 0 auto; margin-bottom: 10px;}
 #contents .container>ul>li:nth-child(7){background-image: url(../images/bg06.png);background-size: cover;}
 #contents .container>ul>li:nth-child(8){width: 75%;overflow: hidden;}
 
+/* common_cont_title */
+.container li h3{height: 50px;width: 280px;font-size: 30px;font-weight: bold; color: #fff;margin: 10px 10px 10px 10px;}
 
 /*컨텐츠01*/
 .container .slider{position:relative;}
@@ -144,11 +146,11 @@ section .icon img{display: block;margin: 0 auto; margin-bottom: 10px;}
 	width: 400px;
 }
 	
-.container .slider .sliderTxt p{font-size: 50px;color: #0144af; margin-bottom: 40px;}
+.container .slider .sliderTxt p{font-size: 50px;color: #0144af; margin: 30px 40px 40px 40px;}
 .container .slider .sliderTxt p span{font-weight: bold;}
 .container .slider .sliderTxt a{
 		display: block;width: 200px;height: 50px;
-		line-height: 50px;text-align: center;
+		line-height: 50px;text-align: center; margin-left: 40px;
 		border: 1px solid #fff;background: #00163b;
 		font-weight:bold; color: #fff;font-size: 18px;
 	}
@@ -159,7 +161,7 @@ section .icon img{display: block;margin: 0 auto; margin-bottom: 10px;}
 
 /*컨텐츠02*/
 .container .cont02 ul{}
-.container .cont02 .cont02_txt p{font-size: 18px;color: #fff; margin-bottom: 30px;padding-top: 50px;margin-left: 50px;font-weight: lighter;}
+.container .cont02 .cont02_txt p{font-size: 18px;color: #fff; margin-top: 40px ;margin-bottom: 30px;padding-top: 50px;margin-left: 50px;font-weight: lighter;}
 .container .cont02 .cont02_txt span{font-size: 35px;}
 .container .cont02 .cont02_txt span.bold{font-weight: bold;}
 .container .cont02 .cont02_txt a{
@@ -176,19 +178,15 @@ section .icon img{display: block;margin: 0 auto; margin-bottom: 10px;}
 
 
 /*컨텐츠03*/
-.container .cont03 p{font-size: 30px;font-weight: bold; color: #fff;margin: 10px 10px 20px 10px;}
-.container .cont03 img{display: block;margin: 10px auto;}
 .container .cont03 li{width: 100px;float: left;text-align: center;}
-.container .cont03 li p{font: 1em sans-serif;}
+.container .cont03 li p{font:0.8em sans-serif;color: #fff;}
 
 /*컨텐츠04*/
-.container .cont04 p{font-size: 30px;font-weight: bold; color: #fff;margin: 10px 10px 20px 10px;}
-.container .cont04 p.noti_title{border-bottom: 2px solid #ccc;padding-bottom: 20px;}
+.container li .noti_border{border-bottom: 3px solid #ccc;margin-bottom: 10px;}
 .container .cont04 li p{font: 0.8em sans-serif;color: #fff;margin: 10px 10px;}
 .container .cont04 li span{float: right;}
 
 /*컨텐츠05*/
-.container .cont05 p{font-size: 30px;font-weight: bold; color: #000;margin:10px 10px 20px 10px;}
 .container .cont05 li.news_img{float: left;margin-left: 10px;}
 .container .cont05 div.news_right{float: right;padding-right:15px;}
 .container .cont05 .news_txt p{width: 140px;height: 100px;margin: 0px auto;
@@ -232,13 +230,13 @@ section .icon img{display: block;margin: 0 auto; margin-bottom: 10px;}
 
 /*컨텐츠08*/
 .container .cont08{position: relative;}
-.container .cont08 .slider02 li:nth-child(2) #book{background: blue;opacity:0.8}
-.container .cont08 .slider02 li:nth-child(3) #book{background: black;opacity:0.8}
+.container .cont08 .slider02 li.book:nth-child(2) a{background: blue;opacity:0.8}
+.container .cont08 .slider02 li.book:nth-child(3) a{background: black;opacity:0.8}
 .container .cont08 .slider02 .sliderTxt02{position: absolute;top: 30px;left:30px;}
 .container .cont08 .slider02 .sliderTxt02 p{font-size: 28px;color: #ef3d31;margin-bottom: 25px}
 .container .cont08 .slider02 .sliderTxt02 p span{font-size: 40px;color: #ef3d31;font-weight: bold;letter-spacing: 5px;}
-.container .cont08 .slider02 .sliderTxt02 #book{width: 200px;height: 50px;color: #fff;
-											display: block;border: 0px solid #000;background: #ef3d31;
-											text-align: center;font-weight: bold;line-height: 50px;
-											opacity:0.8;
+.container .cont08 .slider02 li.book a{width: 200px;height: 50px;color: #fff;
+										display: block;border: 0px solid #000;background: #ef3d31;
+										text-align: center;font-weight: bold;line-height: 50px;
+										opacity:0.8;
 										}
