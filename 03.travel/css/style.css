@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /*header*/
-header .hwrap{
+header .hwrap{min-width:980px;
 		width: 100%;height: 70px;
 		background-image: url(../images/04비행기.jpg);
 		_background-size: cover;
@@ -12,17 +12,17 @@ header .hwrap div{width: 980px; margin: 0 auto;}
 header ul{margin: 0 auto;}
 header .hmenu li{
 	float: left;width: 326.66px;height: 70px;
-	border: 1px solid #000;
+	_border: 1px solid #000;
 	margin: 0 auto;
 }
 header .hmenu li.logo{text-align: center;color: #000;}
-header .hmenu li img{
+header .hmenu li.logo img{
 	display: block;width: 220px;height: 50px;margin:10px;
 	text-align: center;
 }
 
-header .hmenu li.search{position: relative;}
-header .hmenu li form{position: absolute;top: 13px;left: -10px;}
+header .hmenu li.search{}
+header .hmenu li form{position:relative;top: 15px;left: -20px;border: none;}
 header .hmenu li.search .searchTitle{
 			display: block;position: absolute;
 			width: 60px;height: 20px;
@@ -35,22 +35,27 @@ header .hmenu li.search .searchInp{
 			text-indent:90px;font-size:13px;
 			_border: 3px solid #000;border-radius:25px;
 			}
-header .hmenu li.search .searchBtn{
-			position: absolute;
-			width: 25px;height: 25px;
-			right:30px;top: 8px;top:50%;transform:translateY(-50%);
+header .hmenu li.search .buttonInp{width: 20px;height: 20px;
+			position: absolute;right: 40px;top: 10px;
+			text-indent: -999;
+			display: block;
 			background: #fff;
 			background-image: url(../images/search.jpg);
 			background-size: cover;
-			text-indent:-9999px;
+			border: none;border-radius: 20px;cursor: pointer;
 			}
+header .hmenu li.search button img{width: 20px;height: 20px;}
 
+header .hmenu li.tel{position: relative;left: -20px;}
 header .hmenu li.tel h2{
-	color: #fff;position: absolute;top: 13px;
+	color: #fff;position: absolute;top: 15px;
 
 }
+header .hmenu li .sns{width: 120px;height: 50px;_border: 1px solid #000;
+	position: absolute;right: 0;bottom: 0;padding-top: 1px;
 
-
+}
+header .hmenu li .sns img{float: right;width: 25px;height: 25px;margin-left: 4px;text-align: center;}
 
 
 
@@ -69,7 +74,8 @@ header .gwrap .gnb li{
 
 
 }
-header .gmenu li:fist-child:before{
+header .gwrap .gnb li a{display: block;width: 100%;height: 100%;}
+header .gwrap .gnb li:fist-child:before{
 	centent:"";display: block; width: 2px;height: 60px;
 	background-color: #fff;position: absolute; left: 0; top: 10px;
 }
@@ -115,11 +121,15 @@ body{
 }
 #contents .container .cont01 .form{position: absolute;right:0}
 #contents .container .cont01 .form li{
-	height:75px;width: 30%;
-	_border: 1px solid #000;
+	height:75px;width: 136px;
+	border: 1px solid #000;
 	_text-align: center;_line-height: 75px;
 	background: #fff;
+}
 
+#contents .container .cont01 .form li a{
+	display: block;text-align: center;line-height: 70px;
+	color: #000;
 }
 
 /* ====cont01===== */
@@ -127,48 +137,58 @@ body{
 	#contents .container .cont01 .form fieldset{width: 70%;
 		position: absolute;top: 0;right: 0;
 		padding-top: 10px;padding-left: 20px;padding-right: 20px;
-		line-height: 35px;
+		line-height: 35px;background-color: #fff;
 	}
 
-	#contents fieldset .field .inp-field01{
-		width: 290px;height: 30px;border:1 none; /*보드값삭제*/
+	#contents fieldset .field .inp-field{
+		width: 300px;height: 30px;border:1 none; /*보드값삭제*/
 		color:#333;font-size:13px;text-indent:12px; /*들여쓰기*/
 	}
-	#contents fieldset .field .inp-field02{
-		width: 50px;height: 30px;border:1 none; 
+	#contents fieldset .date .date_left{float: left;}
+	#contents fieldset .date .date_right{float: right;}
+	#contents fieldset .date .inp-field02{
+		width: 140px;height: 30px;border:1 none; 
 		color:#333;font-size:13px;text-indent:12px;
 	}
-	#contents fieldset .field .inp-field03{
-		width: 50px;height: 30px;border:1 none; 
-		color:#333;font-size:13px;text-indent:12px; 
-	}
 
-	#contents fieldset .field .inp-field04{
-		width: 50px;height: 30px;border:1 none; 
+	#contents fieldset .date .seat_left{float: left;}
+	#contents fieldset .date .seat_right{float: right;_width: 150px;}
+	#contents fieldset .date .inp-field03{
+		width: 120px;height: 30px;border:1 none; 
 		color:#333;font-size:13px;text-indent:12px; 
 	}
-	#contents fieldset .field .inp-field05{
-		width: 50px;height: 30px;border:1 none; 
+	#contents fieldset .date .inp-field04{
+		width: 70px;height: 30px;border:1 none; 
 		color:#333;font-size:13px;text-indent:12px; 
 	}
-	#contents fieldset .field .inp-field06{
-		width: 50px;height: 30px;border:1 none; 
-		color:#333;font-size:13px;text-indent:12px; 
+ 
+	#contents fieldset button{position: relative;
+		margin-top: 20px;margin-bottom: 20px;width: 300px;height: 40px;
+		background: #ea4f1f;color: #fff; font-weight: bold;border: none;
+		cursor: pointer;line-height: 30px;text-align: center;
 	}
-	#contents fieldset .field button{width: 250px;height: 50px;}
+	#contents fieldset button .icon2{display: block;position: absolute;left: 95px;top: 5px;}
+
+
 #contents .container .cont01 .under_cont{width: 100%;position: absolute;margin: 0 auto;top: 300px;}
 #contents .container .cont01 .under_cont li{width: 232px;height: 230px;float: left;
 	margin-right: 15px;margin-top: 15px;
 }
 
 /*under_cont*/
+#contents .container .cont01 .under_cont li{overflow: hidden;}
 #contents .container .cont01 .under_cont li:first-child{background-image: url(../images/03여행01.jpg);background-repeat: no-repeat;}
 #contents .container .cont01 .under_cont li:nth-child(2){background-image: url(../images/03여행02.jpg);background-repeat: no-repeat;}
 #contents .container .cont01 .under_cont li:last-child{margin-right: 0;}
+#contents .container .cont01 .under_cont li img{transition: 0.3s}
+
+#contents .container .cont01 .under_cont li img:hover{transform: scale(1.2);}
 
 
 
 /*=====cont02======*/
+#contents .cont02 h1{width: 100%;padding: 20px;font-weight: normal;letter-spacing: -1px;}
+#contents .cont02 h1 span{font-size: 50px;font-weight: bold;border-bottom: 5px solid #000;}
 #contents .cont02 img{position:absolute;top:-200px;right: 0px;
 			animation-name:bal01;
 			animation-duration:3s;
@@ -177,7 +197,7 @@ body{
 			z-index:-999
 		}
 		@keyframes bal01{
-			0%{top:300px;}
+			0%{top:200px;}
 			_50%{top:-250px;}
 			100%{top:50px;}
 		}
@@ -190,10 +210,10 @@ body{
 	margin-right: 15px;margin-top: 15px;border: 1px solid #000;
 }
 #contents .container .cont03 li:last-child{margin-right: 0;}
-#contents .container .cont03 li:first-child{background-image: url(../images/03여행01.jpg);background-repeat: no-repeat;}
-#contents .container .cont03 li:nth-child(2){background-image: url(../images/03여행01.jpg);background-repeat: no-repeat;}
-#contents .container .cont03 li:nth-child(3){background-image: url(../images/03여행01.jpg);background-repeat: no-repeat;}
-#contents .container .cont03 li:nth-child(4){background-image: url(../images/03여행01.jpg);background-repeat: no-repeat;}
+#contents .container .cont03 li:first-child{background-image: url(../images/03여행03.jpg);background-repeat: no-repeat;}
+#contents .container .cont03 li:nth-child(2){background-image: url(../images/03여행04.jpg);background-repeat: no-repeat;}
+#contents .container .cont03 li:nth-child(3){background-image: url(../images/03여행05.jpg);background-repeat: no-repeat;}
+#contents .container .cont03 li:nth-child(4){background-image: url(../images/03여행06.jpg);background-repeat: no-repeat;}
 
 /*=====cont04======*/
 
