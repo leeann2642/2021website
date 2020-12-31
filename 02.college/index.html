@@ -5,11 +5,14 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>한국대학교</title>
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/colorbox.css">
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
 	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+		
 		<script>
 			$(document).ready(function(){ //jquery start
 		var mySlider = $("ul.slider").bxSlider({
@@ -28,6 +31,18 @@
 			mySlider.goToPrevSlide();
 		});
 
+	//모달
+			$(".modal").colorbox({
+			
+		});
+
+	//영상 넣기
+	
+			$(".youtube").colorbox({
+				iframe:true,
+				innerWidth:700,
+				innerHeight:393.75
+			});
 
 		}); //jquery end
 	</script>
@@ -259,7 +274,7 @@
 	         			</li>
 
 	         <!-- 25% --><li class="cont07"><!-- 컨텐츠07 -->
-	         				<a href="">▶</a>
+	         				<a href="https://www.youtube.com/embed/nn-0rd2fDsU" class="youtube">▶</a>
 
 	         			</li>
 	        <!-- 75% --><li class="cont08"><!-- 컨텐츠08 -->

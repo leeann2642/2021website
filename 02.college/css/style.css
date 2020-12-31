@@ -227,6 +227,7 @@ section .icon img{display: block;margin: 0 auto; margin-bottom: 10px;}
 					line-height: 70px; text-indent: 10px;
 					margin: 0 auto;
 						}
+.container .cont07 a:hover {background: red; border-radius: 40px;}
 
 /*컨텐츠08*/
 .container .cont08{position: relative;}
