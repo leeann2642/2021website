@@ -13,14 +13,25 @@
 
 	<script>
 		$(document).ready(function(){
-		$("ul.slider01").bxSlider({ 
-			controls:false, //컨드롤 없앰
-			pager:false, //페이져 없앰
-			pagerCustom:".sliderTab",
-			auto:true //자동전환
-			mode:'vertical'
+			$("ul.slider01").bxSlider({ 
+				controls:false, //컨드롤 없앰
+				// pager:false, //페이져 없앰
+				pagerCustom:".sliderTab",
+				auto:false, //자동전환
+				mode:'vertical',
 
 			});
+
+			$("ul.slider02,ul.slider03").bxSlider({ 
+				controls:false,
+				pager:false,
+				auto:true, //자동전환
+				mode:'horizontal',
+				autoHover: true,
+
+			});
+
+
 		});
 	</script>
 <style>
@@ -82,11 +93,11 @@
 
 	<content id="contents">
 		<div class="container"> <!-- 980 -->
-			<ul> <!-- contentlist -->
+			<ul class="clearfix"> <!-- contentlist -->
 				<li class="cont01">
 				 <div class="form">
-					<ul class="clearfix slider01">
-					  <li>
+					<ul class="slider01">
+					  <li><!--  1 -->
 						<fieldset style="border: 0">
 						 <div class="field">
 							<label for="country" class="blind">가고싶은 나라를 선택하세요.</label>
@@ -144,8 +155,182 @@
 										검색하기 
 									</button>
 					 	</fieldset>	
-					  </li>
+					  </li><!-- 2 -->
+					  	<fieldset style="border: 0">
+						 <div class="field">
+							<label for="country" class="blind">가고싶은 호텔 선택하세요.</label>
+								<select name="country" required class="inp-field">
+								<option value="선택하세요">선택하세요</option>
+								<option value="미국">미국</option>
+								<option value="캐나다">캐나다</option>
+								<option value="뉴질랜드">뉴질랜드</option>
+								<option value="스페인">스페인</option>
+								</select>
+							</div>
 
+							<div class="date clearfix">
+       							<div class="date_left">
+           						<label for="depar" class="label-title">출발일<br></label>
+            					<input type="date" id="depar" class="inp-field02" placeholder="" required="required">
+        					</div>
+        					<div class="date_right">
+            					<label for="arrive" class="label-title">도착일<br></label>
+           						<input type="date" id="arrive" class="inp-field02" placeholder="" >
+       							</div>
+
+       									<div class="seat clearfix">
+       									 <div class="seat_left">
+           									 <label for="seat" class="label-title">좌석등급<br></label>
+            								<select id="seat" class="inp-field03" placeholder="" required="required">
+            								 <option>Economy</option>
+           									 <option>Business</option>
+           									 <option>VIP</option>
+           									</select>
+        								</div>
+        								<div class="seat_right">
+            								<label for="seat" class="label-title">성인 &nbsp &nbsp &nbsp&nbsp아이<br></label>
+           									 <select id="adult" class="inp-field04" placeholder="" >
+           									 <option>1</option>
+           									 <option>2</option>
+           									 <option>3</option>
+           									 <option>4</option>
+           									 <option>5</option>
+           									</select>
+           						
+           									 <select id="child" class="inp-field04" placeholder="">
+           									 <option>1</option>
+           									 <option>2</option>
+           									 <option>3</option>
+           									 <option>4</option>
+           									 <option>5</option>
+           									</select>
+       									 </div>
+
+    							 </div>
+
+									<button>
+										<span class="icon2"><img src="images/search.png" alt=""></span>
+										검색하기 
+									</button>
+					 	</fieldset>	
+					  <li><!-- 3 -->
+					  	<fieldset style="border: 0">
+						 <div class="field">
+							<label for="country" class="blind">타고싶은 렌트카를 선택하세요.</label>
+								<select name="country" required class="inp-field">
+								<option value="선택하세요">선택하세요</option>
+								<option value="미국">미국</option>
+								<option value="캐나다">캐나다</option>
+								<option value="뉴질랜드">뉴질랜드</option>
+								<option value="스페인">스페인</option>
+								</select>
+							</div>
+
+							<div class="date clearfix">
+       							<div class="date_left">
+           						<label for="depar" class="label-title">출발일<br></label>
+            					<input type="date" id="depar" class="inp-field02" placeholder="" required="required">
+        					</div>
+        					<div class="date_right">
+            					<label for="arrive" class="label-title">도착일<br></label>
+           						<input type="date" id="arrive" class="inp-field02" placeholder="" >
+       							</div>
+
+       									<div class="seat clearfix">
+       									 <div class="seat_left">
+           									 <label for="seat" class="label-title">좌석등급<br></label>
+            								<select id="seat" class="inp-field03" placeholder="" required="required">
+            								 <option>Economy</option>
+           									 <option>Business</option>
+           									 <option>VIP</option>
+           									</select>
+        								</div>
+        								<div class="seat_right">
+            								<label for="seat" class="label-title">성인 &nbsp &nbsp &nbsp&nbsp아이<br></label>
+           									 <select id="adult" class="inp-field04" placeholder="" >
+           									 <option>1</option>
+           									 <option>2</option>
+           									 <option>3</option>
+           									 <option>4</option>
+           									 <option>5</option>
+           									</select>
+           						
+           									 <select id="child" class="inp-field04" placeholder="">
+           									 <option>1</option>
+           									 <option>2</option>
+           									 <option>3</option>
+           									 <option>4</option>
+           									 <option>5</option>
+           									</select>
+       									 </div>
+
+    							 </div>
+
+									<button>
+										<span class="icon2"><img src="images/search.png" alt=""></span>
+										검색하기 
+									</button>
+					 	</fieldset>	
+					  </li>
+					  <li><!-- 4 -->
+					  	<fieldset style="border: 0">
+						 <div class="field">
+							<label for="country" class="blind">가고싶은 휴향지를 선택하세요.</label>
+								<select name="country" required class="inp-field">
+								<option value="선택하세요">선택하세요</option>
+								<option value="미국">미국</option>
+								<option value="캐나다">캐나다</option>
+								<option value="뉴질랜드">뉴질랜드</option>
+								<option value="스페인">스페인</option>
+								</select>
+							</div>
+
+							<div class="date clearfix">
+       							<div class="date_left">
+           						<label for="depar" class="label-title">출발일<br></label>
+            					<input type="date" id="depar" class="inp-field02" placeholder="" required="required">
+        					</div>
+        					<div class="date_right">
+            					<label for="arrive" class="label-title">도착일<br></label>
+           						<input type="date" id="arrive" class="inp-field02" placeholder="" >
+       							</div>
+
+       									<div class="seat clearfix">
+       									 <div class="seat_left">
+           									 <label for="seat" class="label-title">좌석등급<br></label>
+            								<select id="seat" class="inp-field03" placeholder="" required="required">
+            								 <option>Economy</option>
+           									 <option>Business</option>
+           									 <option>VIP</option>
+           									</select>
+        								</div>
+        								<div class="seat_right">
+            								<label for="seat" class="label-title">성인 &nbsp &nbsp &nbsp&nbsp아이<br></label>
+           									 <select id="adult" class="inp-field04" placeholder="" >
+           									 <option>1</option>
+           									 <option>2</option>
+           									 <option>3</option>
+           									 <option>4</option>
+           									 <option>5</option>
+           									</select>
+           						
+           									 <select id="child" class="inp-field04" placeholder="">
+           									 <option>1</option>
+           									 <option>2</option>
+           									 <option>3</option>
+           									 <option>4</option>
+           									 <option>5</option>
+           									</select>
+       									 </div>
+
+    							 </div>
+
+									<button>
+										<span class="icon2"><img src="images/search.png" alt=""></span>
+										검색하기 
+									</button>
+					 	</fieldset>	
+					  </li>
 					 </ul>
 					 <div class="sliderTab">
 						<a href="#" data-slide-index="0">공항예약</a>
@@ -156,7 +341,6 @@
 
 						
 				 </div>
-
 
 					<div class="under_cont">
 						<ul class="clearfix">
@@ -173,39 +357,92 @@
 								</div></a>
 							</li>
 						</ul>
-
-
+						<div class="bal02">
+						<img src="images/content5.png" alt="">
+						</div>
 					</div>
 				</li>
 			
 			
-
 				<li class="cont02">
-					<h2><span>TRAVEL GO</span><br>지금,여행이 떠나고 싶다면?<br>하이미디어와 여행을 떠나자!</h2>
+				<div class="text">
+					<h2>TRAVEL GO</h2><br>
+						<h3>지금,여행이 떠나고 싶다면?<br>
+						하이미디어와 여행을 떠나자!</h3>
 					<img src="images/02풍선.png" alt="">
+				</div>
 				</li>
 
 
-				<li class="cont03">
-					<ul class="clearfix">
-					 	 <li>
+				<li class="cont03 ml15">
+					<ul class="slider02">
+						<li>
 							<img src="images/03여행03.jpg" alt="">
 						 	<a href="https://www.hanatour.com">
 							<div class="overay">
-							<p>HILLTON HOTEL (PARIS)<br> <span>별점 </span></p></a>															
+							<p>HILLTON HOTEL (PARIS)<br></p> 
+							<div class="star">
+								<span><img src="images/star_on.png" alt=""> </span>
+								<span><img src="images/star_on.png" alt=""> </span>
+								<span><img src="images/star_on.png" alt=""> </span>
+								<span><img src="images/star_on.png" alt=""> </span>
+								<span><img src="images/star_off.png" alt=""> </span></div>
+							</a>
+							</div>		
+						 </li>
+						 <li>
+							<img src="images/03여행02.jpg" alt="">
+						 	<a href="https://www.hanatour.com">
+							<div class="overay">
+							<p>HILLTON HOTEL (PARIS)<br></p> 
+							<div class="star">
+								<span><img src="images/star_on.png" alt=""> </span>
+								<span><img src="images/star_on.png" alt=""> </span>
+								<span><img src="images/star_on.png" alt=""> </span>
+								<span><img src="images/star_on.png" alt=""> </span>
+								<span><img src="images/star_off.png" alt=""> </span></div>
+							
+							</div></a>		
 						 </li>
 
-						<li>
-							<img src="images/03여행04.jpg" alt="">
-						 <a href="https://www.hanatour.com">
-
-							<div class="overay">
-							<p>관광명소 (디즈니랜드)<br> <span>별점 </span></p>
-						 </a>
+					</ul>
 
 
-						</li>
-						<li>
+				<li class="cont04 ml15">
+				  <ul class="slider03">
+				  	<li>
+					 <img src="images/03여행04.jpg" alt="">
+					  <a href="https://www.hanatour.com">
+						<div class="overay">
+						 <p>관광명소 (디즈니랜드)<br></p>
+						 <div class="star">
+							<span><img src="images/star_on.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span></div>
+					 
+					 </div>	</a>		
+				 	</li>
+				 	<li>
+					 <img src="images/03여행01.jpg" alt="">
+					  <a href="https://www.hanatour.com">
+						<div class="overay">
+						 <p>관광명소 (디즈니랜드)<br></p>
+						 <div class="star">
+							<span><img src="images/star_on.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span></div>
+					 
+					 </div>	</a>		
+				 	</li>
+
+				</ul>
+
+
+				<li class="cont05 ml15">
 							<h3>TOKYO</h3>
 							<img src="images/03여행05.jpg" alt="">
 						 <a href="https://www.hanatour.com">
@@ -213,47 +450,110 @@
 							<p>20°C 구름조금<br> <span>습도 60% 바람 남남풍 2m/s </span></p>
 						 </a>
 
+				</li>
 
-
-						</li>
-						<li class="last">
-							<h3>"해외 여행은 처음이었는데 무사히 다녀올 수 있었어요"<br>
+				<li class="cont06">
+							<h3>"해외 여행은 처음이었는데 덕분에 무사히 다녀올 수<br> 있었어요"<br>
 								<span>프랑스 파리 자유여행</span>
 							</h3>
+							<div class="star">
+							<span><img src="images/star_on.png" alt=""> </span>
+							<span><img src="images/star_on.png" alt=""> </span>
+							<span><img src="images/star_on.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span>
+							<span><img src="images/star_off.png" alt=""> </span></div>
 							<img src="images/03여행06.jpg" alt="">
+
 						 <a href="https://www.hanatour.com">
 							<div class="overay">
 							<p>FaceBook여행후기<br> <span>(임정희님) </span></p>
 						 </a>
 
+				</li>
+
+				<li class="cont07">
+					<ul class="clearfix">
+						<li>
+						 <img src="images/03여행07.jpg" alt="">
+						 <div class="overay"></div>
+						  <div class="txt">	
+							<h3><span><img src="images/07icon_1.png" alt=""></span>여행정보</h3>
+							<p>다양한 나라의 명소와 맛집등<br>상세한 정보를 보실 수 있습니다.</p>
+						  </div>
+							
+							<a href=""><div class="bar">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+							</div>
+							</a>
 						</li>
+
+
+						<li>
+							 <img src="images/03여행08.jpg" alt="">
+						 <div class="overay"></div>
+						  <div class="txt">	
+							<h3><span><img src="images/07icon_1.png" alt=""></span>맛집정보</h3>
+							<p>다양한 나라의 명소와 맛집등<br>상세한 정보를 보실 수 있습니다.</p>
+						  </div>
+							
+							<a href=""><div class="bar">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+							</div>
+							</a>
+
+						</li>
+
+						<li>
+							 <img src="images/03여행09.jpg" alt="">
+						 <div class="overay"></div>
+						  <div class="txt">	
+							<h3><span><img src="images/07icon_1.png" alt=""></span>숙박정보</h3>
+							<p>다양한 나라의 명소와 맛집등<br>상세한 정보를 보실 수 있습니다.</p>
+						  </div>
+							
+							<a href=""><div class="bar">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+							</div>
+							</a>
+						</li>
+
+						<li>
+ 						<img src="images/03여행10.jpg" alt="">
+						 <div class="overay"></div>
+						  <div class="txt">	
+							<h3><span><img src="images/07icon_1.png" alt=""></span>여행자후기</h3>
+							<p>다양한 나라의 명소와 맛집등<br>상세한 정보를 보실 수 있습니다.</p>
+						  </div>
+							
+							<a href=""><div class="bar">
+								<div class="bar1"></div>
+								<div class="bar2"></div>
+							</div>
+							</a>
+
+						</li>
+
 					</ul>
-
-
-
 
 				</li>
 
-
-
-
-
-
-
-
-
-
-			<!-- 	<li>4</li>
-				<li>5</li>
-				<li>6</li>
-				<li>7</li>
-				<li>8</li>
-				<li>9</li>
-				<li>10</li>
-			 -->
 			</ul>		
 		</div>
 
 	</content>
+
+	<footer class="mt15">
+		<div class="box1">
+			이용약관&nbsp&nbsp 개인정보취급&nbsp&nbsp 방침&nbsp&nbsp 사이트맵&nbsp&nbsp 고객센터&nbsp&nbsp 광고 및 제휴 문의
+		</div>
+		<address class="mt15">
+			123-456 서울시 구로구 구로동 (주)하이미디어 사업자 등록번호 :123-45-67890 대표이사 홍길동 대표번호 02-1234-5678<br>
+			COPYRIGHT©GO TRAVEL TOUR ALL RIGHTS RESERVED.
+		</address>
+
+	 </footer>
 </body>
 </html>
