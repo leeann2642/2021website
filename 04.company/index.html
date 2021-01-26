@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>company</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/colorbox.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script src="js/wow.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+
+<!-- 	<script>
+ 	new WOW().init({
+		offset: 0,
+		mobile:true,
+	});
+	</script> -->
+
+	<script>
+		$(document).ready(function(){
+			
+			$(".slider").bxSlider({
+				pager:false,
+			});
+			$(".slider1st").bxSlider({
+				controls:false,
+				pager:true,
+				mode:'fade',
+				auto: true,
+
+			});
+
+
+			$(".toggleMenu").click(function(){
+				var toggle = $(".toggleMenu").attr("class"); //get
+				if(toggle == "toggleMenu"){
+					$(".toggleMenu").addClass("change");
+					$("#main_menu").stop().animate({left:0},300); //메뉴 나옴()
+				}else{
+					$(".toggleMenu").removeClass("change");
+					$("#main_menu").stop().animate({left:"-100%"},300);//메뉴 안나옴
+				}
+
+			});
+
+			$(window).resize(function(){
+				$(".toggleMenu").removeClass("change");
+				$("#main_menu").removeAttr("style"); //스타일 초기화 
+			});
+
+			$(function(){
+			$(window).scroll(function(){  //스크롤하면 아래 코드 실행
+       			var num = $(this).scrollTop();  // 스크롤값
+       			if( num > 36 ){  // 스크롤을 36이상 했을 때
+         		 $("#header_top").css("top",0);
+       			}else{
+           $("#header_top").css("top","30px");
+       	}
+  });
+});
+		
+		});
+
+	</script>
+
+
+<script>
+//<<<모달>>>
+$(document).ready(function(){
+
+		$(".modal").colorbox({
+				rel:"modal",
+			    iframe:true,
+				innerWidth:560,
+				innerHeight:315
+
+		});
+
+   //<<<탑메뉴>>>
+	 $("#main_menu>ul>li").hover(function(){
+      $(this).find(".submenu").show();
+    },function(){
+      $(this).find(".submenu").hide();
+    });
+	
+	});
+	
+</script>
+
+
+<style>
+	.cont03 .bx-wrapper .bx-pager{
+    position: absolute;left: 100px;top: 230px;
+    width: 100px;
+}
+
+/*슬라이더 옵션*/
+.cont03 .bx-wrapper .bx-default-pager a.active{background: red;}
+</style>
+
+</head>
+<body>
+	<header id="main_header">
+		<div id="header_top">
+		  <nav id="main_menu">
+			<div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+
+				<ul class="clearfix">
+					<li><a href="#">회사소개</a>
+						<ul class="submenu">
+            				<li><a href="#">미션</a></li>
+            				<li><a href="#">비전</a></li>
+            				<li><a href="#">핵심가치</a></li>
+            				<li><a href="#">기업문화</a></li>
+          				</ul>
+					</li>
+					<li><a href="#">BUSINESS</a>
+						<ul class="submenu">
+            				<li><a href="#">식품</a></li>
+            				<li><a href="#">유통</a></li>
+            				<li><a href="#">화학·건설</a></li>
+            				<li><a href="#">관광·서비스</a></li>
+          				</ul>
+
+					</li>
+					<li><a href="#">PR</a>
+						<ul class="submenu">
+            				<li><a href="#">뉴스</a></li>
+            				<li><a href="#">영상</a></li>
+            				<li><a href="#">사보</a></li>
+            				<li><a href="#">브로슈어</a></li>
+          				</ul>
+
+					</li>
+					<li><a href="#">IR</a>
+						<ul class="submenu">
+            				<li><a href="#">지배구조</a></li>
+            				<li><a href="#">주주정책</a></li>
+            				<li><a href="#">공시</a></li>
+            				<li><a href="#">공고</a></li>
+            				<li><a href="#">주가정보</a></li>
+          				</ul>
+
+					</li>
+					<li><a href="#">CAREERS</a>
+						<ul class="submenu">
+            				<li><a href="#">인재상</a></li>
+            				<li><a href="#">채용전용</a></li>
+          				</ul>
+					</li>
+					<li><a href="#">고객센터</a>
+						<ul class="submenu">
+            				<li><a href="#">문의하기</a></li>
+            				<li><a href="#">오시는 길</a></li>
+          				</ul>
+
+					</li>
+					<li style="padding-left: 30px;"><a href="#"><span>KO EN</span></a></li>
+				</ul>
+			</nav>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+		<div class="sliderWrap">
+			<ul class="slider">
+				<li class="slider_1st"> 
+					<div class="slider_txt">
+						<h3 class= "wow zoomIn _fadeInDown delay-0.5s">인류의 행복한 삶을 창조하는 글로벌 기업</h3><br><br>
+				       
+					<p>롯데는 전 세계에 풍요로운 가치를 전하며<br>아시아 TOP10 글로벌 그룹으로 도약해 나가고 있습니다.</p>
+					</div>
+				</li>
+				<li class="slider_2st"> 
+					<div class="slider_txt">
+						<h3 class= "wow zoomIn _fadeInDown delay-0.5s">Together, Make a Better day</h3><br><br>
+				       
+					<p>롯데는 전 세계에 풍요로운 가치를 전하며<br>아시아 TOP10 글로벌 그룹으로 도약해 나가고 있습니다.</p>
+					</div>
+				</li>
+
+
+			</ul>
+		</div>
+		<div class="content">
+			<ul class="clearfix">
+				<li class="cont01 wow flipInX delay-1s">
+					<a href="#">
+						<img src="images/icon01_01.png" alt="사보">
+						<p>사보</p>
+					</a>
+				</li>
+				<li class="ct2st wow flipInX delay-1s">
+					<a href="https://www.youtube.com/embed/yrOT5vkgxVk" class="modal">
+						<img src="images/play.jpg" alt="영상" class="bgImg">
+					</a>
+				</li>
+				<li class="cont03 wow flipInX delay-1s">
+					<div class="sliderWrap">
+						<ul class="slider1st">
+							<li class="news clearfix">
+								<div class="left">오픈이노베이션에 참여하세요!</div>
+								<div class="right">
+									<img src="images/img01_02_.jpg" alt="img">
+								</div>
+							</li>
+							<li class="news clearfix">
+								<div class="left">누구나 참여할 수 있는 오프 이노베이션을 통해 다양한 아이디어를 발굴하는 열린 혁신을 추구 합니다. </div>
+								<div class="right">
+									<img src="images/img01_01_.jpg" alt="img">
+								</div>
+							</li>
+							
+						</ul>
+						<h2>뉴스</h2>
+						<div class="btn clearfix">
+							<img src="images/btn01_01.jpg" alt="" class="prevBtn">
+							<img src="images/btn01_02.jpg" alt="" class="nextBtn">
+						</div>
+					</div>
+				</li>
+				<li class="cont04 wow flipInX">
+					<a href="#">
+						<img src="images/icon01_02.png" alt="공시">
+						<p>공시</p>
+					</a>
+				</li>
+				<li class="cont05 wow flipInX">
+					<a href="#">
+						<img src="images/icon01_03.png" alt="브로슈어">
+						<p>브로슈어</p>
+					</a>
+				</li>
+				<li class="cont06 wow flipInX jpg">
+					<a href="#">
+						<img src="images/img01_03_.jpg" alt="빛과에너지" >
+						<div class="txt">
+							<h3>유통</h3>
+							<p>모바일 사업을 확대하고 채널 혁신과 <br>점포 다변화를추진합니다</p>
+						</div>
+					</a>
+				</li>
+				<li class="cont07 wow flipInX jpg">
+					<a href="#">
+						<img src="images/img01_06.jpg" alt="빛과에너지">
+						<div class="txt">
+							<h3>식품</h3>
+							<p>제과,음료,주류 식품과 
+							<br>가공식품,외식을 아우르는<br> 국내 최대 기업입니다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="cont08 wow flipInX jpg">
+					<a href="#">
+						<img src="images/img01_04_.jpg" alt="빛과에너지">
+						<div class="txt">
+							<h3>서비스</h3>
+							<p>국내 관광/서비스 산업을 선도해 
+							<br>남다른 행복을 선도 합니다.</p>
+						</div>
+					</a>
+				</li>
+				<li class="cont09 wow flipInX">
+					<a href="#">
+						<img src="images/icon01_04.png" alt="주가정보">
+						<p>주가정보</p>
+					</a>
+				</li>
+				<li class="cont10 wow flipInX">
+					<a href="#">
+						<img src="images/icon01_05.png" alt="주주정책">
+						<p>주주정책</p>
+					</a>
+				</li>
+				<li class="cont11 wow flipInX jpg">
+					<a href="#">
+						<img src="images/img01_05_.jpg" alt="빛과에너지">
+						<div class="txt">
+							<h3>화학</h3>
+							<p>지속적인 기술 개발과 품질혁신으로 <br>국내 산업발전에 기어합니다.</p>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+	</header>
+	<div class="container">
+		<div class="section">
+			<h1>ABOUT</h1>
+			<p>인류의 행복한 삶을 창조하는 글로벌 기업</p>
+
+			<ul class="clearfix card wow fadeInUp delay-1s">
+				<li>
+					<div class="card wow fadeInUp delay-1s">
+						<img src="images/banner_icon01_01.png" alt="engineering">
+						<div class="card_body">
+							<h3>MISSION</h3>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card wow fadeInUp delay-2s">
+						<img src="images/banner_icon01_02.png" alt="engineering">
+						<div class="card_body">
+							<h3>VISION</h3>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card wow fadeInUp delay-3s">
+						<img src="images/banner_icon01_03.png" alt="engineering">
+						<div class="card_body">
+							<h3>VALUE</h3>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="card wow fadeInUp delay-4s">
+						<img src="images/banner_icon01_04.png" alt="engineering">
+						<div class="card_body">
+							<h3>CULTURE</h3>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+
+
+	<div class="container02">
+		<div class="section02">
+			<h1>HIGHLIGHT</h1>
+			<p>우리가 일구어낸 현재, 그리고 미래</p>
+
+			<ul class="clearfix">
+				<li class ="wow fadeIn">
+					<div class="card02">
+
+						<div class="card_body">
+							<h3>매출액(2020기준)</h3>
+							<p>2.4<span>조원</span></p>
+						</div>
+					</div>
+				</li>
+				<li class ="wow fadeIn delay-1s">
+					<div class="card">
+
+						<div class="card_body">
+							<h3>고객만족지수 1위</h3>
+							<p>8<span>년 연속</span></p>
+						</div>
+					</div>
+				</li>
+				<li class ="wow fadeIn">
+					<div class="card">
+
+						<div class="card_body">
+							<h3>국내음료업</h3>
+							<p>1<span>위</span></p>
+						</div>
+					</div>
+				</li>
+				<li class ="wow fadeIn delay-1s">
+					<div class="card">
+
+						<div class="card_body">
+							<h3>해외수출</h3>
+							<p>70<span>여개 나라</span></p>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</body>
+</html>
