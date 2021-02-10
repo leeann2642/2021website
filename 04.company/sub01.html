@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>sub</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+</head>
+<script>
+	 $("#main_menu>ul>li").hover(function(){
+      $(this).find(".submenu").show();
+    },function(){
+      $(this).find(".submenu").hide();
+    });
+	
+</script>
+
+<script>
+var viewImg = [
+   "url(images/intro_img01.jpg)",
+   "url(images/intro_img02.jpg)",
+   "url(images/intro_img03.jpg)",
+   "url(images/intro_img04.jpg)",
+ ];
+    $(document).ready(function(){
+      $(".subW li").click(function(){
+        var num = $(this).index();//배열값 가져오기
+        console.log(num);
+        $(".intro").css("background-image",viewImg[num],);
+
+      });
+
+
+    });
+
+</script>
+
+<script>
+
+	$(function(){
+			$(window).scroll(function(){  //스크롤하면 아래 코드 실행
+       			var num = $(this).scrollTop();  // 스크롤값
+       			if( num > 36 ){  // 스크롤을 36이상 했을 때
+         		 $("#header_top").hide();
+       			}else{
+           $("#header_top").show();
+       	}
+  });
+});
+</script>
+
+
+
+
+<style>
+#header_top{
+	width:100%;background:#fff;height: 80px;
+	position: fixed;;z-index:10000;top: 30px;
+}
+#header_top .logo{
+	position: absolute;top: 15px;}
+#header_top .logo img{display: block;margin: 0 auto;height: 20px;margin-top: 13px;}
+#header_top ul>li a{color: #000;}
+
+/*메인메뉴*/
+#main_menu{
+	position: absolute;width: 1260px;height: 80px;
+	_border: 1px solid red;
+	left:50%;transform:translateX(-50%);
+	}
+#main_menu ul{float: right;}
+#main_menu li{float:left;width: 160px;}
+#main_menu li a{
+	height: 80px;padding: 20px 20px;
+	display: block;
+	_border: 1px solid red;text-align: center;
+	font-weight: bold;color: #fff;
+	font:1.5em sans-serif;
+}
+
+
+
+/*서브메뉴*/
+.submenu{display: none;_float: none;}
+.submenu{width: 100%;background:rgb(0,0,0,0.6);}
+.submenu li{_font-size: 16px;}
+.submenu li:hover{background-color:white;display: block;color: #000;}
+.submenu a{
+	display: block;line-height:30px;
+	text-align: center;color:#fff;
+	cursor: pointer;
+}
+.sub01{width: 100%;}
+.sub01 img{width: 100%;height: 500px;display: block;}
+.subW{width: 1260px;height: 1500px;margin: 0 auto; background: olive;}
+.subW>ul{width: 100%;height: 70px;}
+.subW>ul>li{float: left;width: 315px;}
+.subW>ul>li a{
+	display: block;text-align: center;
+	line-height: 70px;
+	border: 1px solid #005e8a;background: #005e8a;
+	color: #fff; font-size: 1.5em;
+}
+.subW>ul>li a:hover{background:#fff;color: #005e8a;}
+a:active{background: #fff;}
+
+.subW .intro{width: 100%;_height: 1000px;background: skyblue;}
+.subW .intro{background-image: url(images/intro_img01.jpg);
+	 background-size: cover;
+	 background-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.active-color { color:#000; }
+
+/* footer */
+.footerWrap{width: 100%;background: #14191f;margin-top: 30px;}
+footer{
+	width: 1260px;height: 200px;_background: grey; margin: 0 auto;margin-bottom: 30px;
+	color: #d1d6da;
+}
+
+footer ul li{float: left;position: absolute;margin: 30px 20px;}
+footer li.left{}
+footer li.left span{color: red;}
+footer li.left address{margin-top: 0px;font-style:normal;}
+footer li.right{position: absolute;right: 0;}
+footer li.right
+
+</style>
+
+
+<script>
+$("a").click(function() {
+    toggleClass(".active-color");
+});
+
+</script>
+<body>
+	<div id="header_top">
+		  <nav id="main_menu">
+			<div class="logo"><a href="index.html"><img src="images/logo2.png" alt=""></a></div>
+
+			<ul class="clearfix">
+					<li><a href="sub01.html">회사소개</a>
+						<ul class="submenu">
+            				<li><a href="sub01.html#intro01">미션</a></li>
+            				<li><a href="sub01.html#intro02">비전</a></li>
+            				<li><a href="sub01.html#intro03">핵심가치</a></li>
+            				<li><a href="sub01.html#intro04">기업문화</a>
+
+ 								
+            				</li>
+          				</ul>
+					</li>
+					<li><a href="#">BUSINESS</a>
+						<ul class="submenu">
+            				<li><a href="#">디지털</a></li>
+            				<li><a href="#">커뮤니티</a></li>
+            				<li><a href="#">블록체인</a></li>
+            				<li><a href="#">결제</a></li>
+          				</ul>
+
+					</li>
+					<li><a href="#">PR</a>
+						<ul class="submenu">
+            				<li><a href="#">뉴스</a></li>
+            				<li><a href="#">영상</a></li>
+            				<li><a href="#">사보</a></li>
+            				<li><a href="#">브로슈어</a></li>
+          				</ul>
+
+					</li>
+					<li><a href="#">IR</a>
+						<ul class="submenu">
+            				<li><a href="#">지배구조</a></li>
+            				<li><a href="#">주주정책</a></li>
+            				<li><a href="#">공시</a></li>
+            				<li><a href="#">공고</a></li>
+            				<li><a href="#">주가정보</a></li>
+          				</ul>
+
+					</li>
+					<li><a href="#">CAREERS</a>
+						<ul class="submenu">
+            				<li><a href="#">인재상</a></li>
+            				<li><a href="#">채용전용</a></li>
+          				</ul>
+					</li>
+					<li><a href="#">고객센터</a>
+						<ul class="submenu">
+            				<li><a href="#">문의하기</a></li>
+            				<li><a href="#">오시는 길</a></li>
+          				</ul>
+
+					</li>
+					<li style="padding-left: 30px;"><a href="#"><span>KO EN</span></a></li>
+				</ul>
+
+			</nav>
+			<div class="toggleMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+		</div>
+	<div class="sub01"><img src="images/sub01.png" alt=""></div>
+	
+	<div class="subW">
+		<ul class = "clearfix">
+			<li><a href="#intro01">미션</a></li>
+			<li><a href="#intro02">비전</a></li>
+			<li><a href="#intro03">핵심가치</a></li>
+			<li><a href="#intro04">기업문화</a></li>
+		</ul>
+		<div class="intro"></div>
+
+</div>
+
+<div class="footerWrap">
+  <footer>
+ 	<ul class="clearfix">
+ 		<li class="left">
+ 			<span style="font-weight: bold;">개인정보처리방침</span> | 이메일 무단수집 거부 | 영상정보처리기기 운영관리 방침<br><br>
+ 	
+ 			<address style="color: #484d53;">서울 영등포구 은행로 3 익스콘벤처타워(8층)<br>
+ 				대표번호:02 - 2168 - 7500/FAX:02 - 769 - 1670<br><br>
+ 				<span style="color: #d1d6da">CopyRight ©Kona I All rights reserved</span>
+ 			</address>
+ 			</li>	
+ 		<li class="right">
+ 			 <img src="images/ic01.png" alt="">&nbsp;
+ 			 <img src="images/ic02.png" alt=""> &nbsp;
+
+ 			<span>통합브로슈어+ </span> &nbsp; &nbsp; &nbsp; &nbsp; Family Site+<br><br>
+ 			<img src="images/ic03.png" alt="">
+ 			<img src="images/ic04.png" alt="">
+ 		</li>
+	</ul>
+
+  </footer>
+</div>
+
+</body>
+
+</html>

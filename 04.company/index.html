@@ -13,13 +13,15 @@
 	<script src="js/jquery.bxslider.js"></script>
 	<script src="js/wow.js"></script>
 	<script src="js/jquery.colorbox-min.js"></script>
+	<script src="js/jquery.mousewheel.min.js"></script>
 
-<!-- 	<script>
+
+	<script>
  	new WOW().init({
 		offset: 0,
 		mobile:true,
 	});
-	</script> -->
+	</script>
 
 	<script>
 		$(document).ready(function(){
@@ -89,7 +91,24 @@ $(document).ready(function(){
     });
 	
 	});
-	
+
+
+//<<스크롤>>
+
+	$(window).scroll(function(){
+ 	var scrollY = $(window).scrollTop();
+	var bodyH = $(document).height();
+
+	if(scrollY > bodyH/2){
+          $(".top").addClass("view");
+        }else{
+          $(".top").removeClass("view");
+        }
+	  $(".top").click(function(){
+        $("html,body").animate({scrollTop:0},1000);
+          });
+	    });
+
 </script>
 
 
@@ -108,23 +127,23 @@ $(document).ready(function(){
 	<header id="main_header">
 		<div id="header_top">
 		  <nav id="main_menu">
-			<div class="logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+			<div class="logo"><a href="index.html"><img src="images/logo.png" alt=""></a></div>
 
 				<ul class="clearfix">
-					<li><a href="#">회사소개</a>
+					<li><a href="sub01.html">회사소개</a>
 						<ul class="submenu">
-            				<li><a href="#">미션</a></li>
-            				<li><a href="#">비전</a></li>
-            				<li><a href="#">핵심가치</a></li>
-            				<li><a href="#">기업문화</a></li>
+            				<li><a href="sub01.html#intro01">미션</a></li>
+            				<li><a href="sub01.html#intro02">비전</a></li>
+            				<li><a href="sub01.html#intro03">핵심가치</a></li>
+            				<li><a href="sub01.html#intro04">기업문화</a></li>
           				</ul>
 					</li>
 					<li><a href="#">BUSINESS</a>
 						<ul class="submenu">
-            				<li><a href="#">식품</a></li>
-            				<li><a href="#">유통</a></li>
-            				<li><a href="#">화학·건설</a></li>
-            				<li><a href="#">관광·서비스</a></li>
+            				<li><a href="#">디지털</a></li>
+            				<li><a href="#">커뮤니티</a></li>
+            				<li><a href="#">블록체인</a></li>
+            				<li><a href="#">결제</a></li>
           				</ul>
 
 					</li>
@@ -172,17 +191,17 @@ $(document).ready(function(){
 		<div class="sliderWrap">
 			<ul class="slider">
 				<li class="slider_1st"> 
-					<div class="slider_txt">
-						<h3 class= "wow zoomIn _fadeInDown delay-0.5s">인류의 행복한 삶을 창조하는 글로벌 기업</h3><br><br>
+					<div class="slider_txt ">
+						<h3 class= "wow zoomIn _fadeInDown delay-0.5s">결제 시스템을 기반으로 하는 통합 플랫폼</h3><br><br>
 				       
-					<p>롯데는 전 세계에 풍요로운 가치를 전하며<br>아시아 TOP10 글로벌 그룹으로 도약해 나가고 있습니다.</p>
+					<p class= "wow zoomIn _fadeInDown delay-1s">글로벌 플랫폼 기업을 향한 코나아이의 도전과 혁신은 계속됩니다.</p>
 					</div>
 				</li>
 				<li class="slider_2st"> 
 					<div class="slider_txt">
-						<h3 class= "wow zoomIn _fadeInDown delay-0.5s">Together, Make a Better day</h3><br><br>
+						<h3 class= "wow zoomIn _fadeInDown delay-0.5s" style="color: #fff;">커뮤니티 기반의 새로운 결제 플랫폼 탄생</h3><br><br>
 				       
-					<p>롯데는 전 세계에 풍요로운 가치를 전하며<br>아시아 TOP10 글로벌 그룹으로 도약해 나가고 있습니다.</p>
+					<p class= "wow zoomIn _fadeInDown delay-1s" style="color: #fff;">모두가 연결되는 편리한 생활을 완성합니다.</p>
 					</div>
 				</li>
 
@@ -197,9 +216,10 @@ $(document).ready(function(){
 						<p>사보</p>
 					</a>
 				</li>
-				<li class="ct2st wow flipInX delay-1s">
-					<a href="https://www.youtube.com/embed/yrOT5vkgxVk" class="modal">
+				<li class="cont02 wow flipInX delay-1s">
+					<a href="https://www.youtube.com/embed/Omm0P0BVjCo" class="modal">
 						<img src="images/play.jpg" alt="영상" class="bgImg">
+						<img src="images/icon.png" alt="재생" class="play">
 					</a>
 				</li>
 				<li class="cont03 wow flipInX delay-1s">
@@ -240,30 +260,30 @@ $(document).ready(function(){
 				</li>
 				<li class="cont06 wow flipInX jpg">
 					<a href="#">
-						<img src="images/img01_03_.jpg" alt="빛과에너지" >
+						<img src="images/img01_04_.jpg" alt="빛과에너지" >
 						<div class="txt">
-							<h3>유통</h3>
-							<p>모바일 사업을 확대하고 채널 혁신과 <br>점포 다변화를추진합니다</p>
+							<h3>블록체인</h3>
+							<p>블록체인 서비스 <br>투표서비스</p>
 						</div>
 					</a>
 				</li>
 				<li class="cont07 wow flipInX jpg">
 					<a href="#">
 						<img src="images/img01_06.jpg" alt="빛과에너지">
-						<div class="txt">
-							<h3>식품</h3>
-							<p>제과,음료,주류 식품과 
-							<br>가공식품,외식을 아우르는<br> 국내 최대 기업입니다.</p>
+						<div class="txt" style="color: #4c4c4a;">
+							<h3>지역 커뮤니티</h3>
+							<p>지역화폐서비스<br>
+							부가서비스</p>
 						</div>
 					</a>
 				</li>
 				<li class="cont08 wow flipInX jpg">
 					<a href="#">
-						<img src="images/img01_04_.jpg" alt="빛과에너지">
+						<img src="images/img01_03_.jpg" alt="빛과에너지">
 						<div class="txt">
-							<h3>서비스</h3>
-							<p>국내 관광/서비스 산업을 선도해 
-							<br>남다른 행복을 선도 합니다.</p>
+							<h3>디지털</h3>
+							<p>스마트 IC칩 
+							<br>스마트 카드</p>
 						</div>
 					</a>
 				</li>
@@ -283,8 +303,8 @@ $(document).ready(function(){
 					<a href="#">
 						<img src="images/img01_05_.jpg" alt="빛과에너지">
 						<div class="txt">
-							<h3>화학</h3>
-							<p>지속적인 기술 개발과 품질혁신으로 <br>국내 산업발전에 기어합니다.</p>
+							<h3>결제</h3>
+							<p>결제플랫폼 <br>복지카드<br>제휴카드</p>
 						</div>
 					</a>
 				</li>
@@ -300,33 +320,33 @@ $(document).ready(function(){
 			<ul class="clearfix card wow fadeInUp delay-1s">
 				<li>
 					<div class="card wow fadeInUp delay-1s">
-						<img src="images/banner_icon01_01.png" alt="engineering">
+						<img src="images/icon01.png" alt="engineering">
 						<div class="card_body">
-							<h3>MISSION</h3>
+							<h2>MISSION</h2>
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="card wow fadeInUp delay-2s">
-						<img src="images/banner_icon01_02.png" alt="engineering">
+						<img src="images/icon02.png" alt="engineering">
 						<div class="card_body">
-							<h3>VISION</h3>
+							<h2>VISION</h2>
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="card wow fadeInUp delay-3s">
-						<img src="images/banner_icon01_03.png" alt="engineering">
+						<img src="images/icon03.png" alt="engineering">
 						<div class="card_body">
-							<h3>VALUE</h3>
+							<h2>VALUE</h2>
 						</div>
 					</div>
 				</li>
 				<li>
 					<div class="card wow fadeInUp delay-4s">
-						<img src="images/banner_icon01_04.png" alt="engineering">
+						<img src="images/icon04.png" alt="engineering">
 						<div class="card_body">
-							<h3>CULTURE</h3>
+							<h2>CULTURE</h2>
 						</div>
 					</div>
 				</li>
@@ -364,8 +384,8 @@ $(document).ready(function(){
 					<div class="card">
 
 						<div class="card_body">
-							<h3>국내음료업</h3>
-							<p>1<span>위</span></p>
+							<h3>제품인증</h3>
+							<p>100<span>개</span></p>
 						</div>
 					</div>
 				</li>
@@ -382,5 +402,57 @@ $(document).ready(function(){
 
 		</div>
 	</div>
+
+
+  <div class="container03">
+	<div class="cont_wrap">
+		<ul class="clearfix">
+		 <li>
+		  <div class="cswrap">
+		 	<p>CS center</p>
+		 	<div class="btn01">바로가기</div>
+		  </div>
+		 	<img src="images/qna.png" alt="qna" class="qna">
+
+		 </li>
+
+
+		 <li>
+		  <div class="cswrap">
+		 	<p>Careers</p>
+		 	<div class="btn02">바로가기</div>
+		  </div>
+		 	<img src="images/career.png" alt="carrer" class="carrer">
+		 </li>
+
+	</div>
+
+  </div>
+ <div class="footerWrap">
+ <footer>
+ 	<ul class="clearfix">
+ 		<li class="left">
+ 			<span style="font-weight: bold;">개인정보처리방침</span> | 이메일 무단수집 거부 | 영상정보처리기기 운영관리 방침<br><br>
+ 	
+ 			<address style="color: #484d53;">서울 영등포구 은행로 3 익스콘벤처타워(8층)<br>
+ 				대표번호:02 - 2168 - 7500/FAX:02 - 769 - 1670<br><br>
+ 				<span style="color: #d1d6da">CopyRight ©Kona I All rights reserved</span>
+ 			</address>
+ 			</li>	
+ 		<li class="right">
+ 			 <img src="images/ic01.png" alt="">&nbsp;
+ 			 <img src="images/ic02.png" alt=""> &nbsp;
+
+ 			<span>통합브로슈어+ </span> &nbsp; &nbsp; &nbsp; &nbsp; Family Site+<br><br>
+ 			<img src="images/ic03.png" alt="">
+ 			<img src="images/ic04.png" alt="">
+ 		</li>
+	</ul>
+
+ </footer>
+</div>
+	<!-- 스크롤탑 -->
+	<div class="top"><img src="images/btn_top.png" alt=""></div>
 </body>
 </html>
+

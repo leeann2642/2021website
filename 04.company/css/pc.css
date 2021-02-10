@@ -1,4 +1,5 @@
 @charset "utf-8";
+html,body{height: 100%;}
 header#main_header{height: 1950px;position: relative;margin-bottom: 100px;}
 
 /*헤더*/
@@ -8,7 +9,7 @@ header#main_header{height: 1950px;position: relative;margin-bottom: 100px;}
 }
 #header_top .logo{
 	position: absolute;top: 15px;}
-#header_top .logo img{width: 50px;height: 50px;}
+#header_top .logo img{display: block;margin: 0 auto;height: 20px;margin-top: 15px;}
 
 /*메인메뉴*/
 #main_menu{
@@ -17,7 +18,7 @@ header#main_header{height: 1950px;position: relative;margin-bottom: 100px;}
 	left:50%;transform:translateX(-50%);
 	}
 #main_menu ul{float: right;}
-#main_menu li{float:left;width: 168px;}
+#main_menu li{float:left;width: 160px;}
 #main_menu li a{
 	height: 80px;padding: 20px 20px;
 	display: block;
@@ -52,16 +53,16 @@ header#main_header{height: 1950px;position: relative;margin-bottom: 100px;}
 
 }
 .sliderWrap li.slider_1st{
-	background-image: url(../images/mainimg01_.jpg);
+	background-image: url(../images/main01.png);
 }
 .sliderWrap li.slider_2st{
-	background-image: url(../images/mainimg02_.jpg);
+	background-image: url(../images/main02.png);
 }
 
 
 .sliderWrap .slider_txt{ /*ml가운데*/
 	position: absolute;width: 1000px;left:50%;margin-left:-500px;
-	text-align: center;color:white;top:30%;
+	text-align: center;#333331;top:30%;
 }
 .sliderWrap .slider_txt h3{font-size:48px;word-spacing: 10px;}
 _.sliderWrap .slider_txt h3:after{
@@ -87,23 +88,23 @@ _.sliderWrap .slider_txt h3:after{
 .content>ul>li a{color: white;transition: 0.5s;}
 
 /* content layout */
-.content>ul>li.cont01{background: #69dc83;}
+.content>ul>li.cont01{background: #69dc83;border-radius: 20px 0 0 0 ;}
 .content>ul>li.cont02{}
-.content>ul>li.cont03{width: 50%;}
-.content>ul>li.cont04{background: #005e8a;}
+.content>ul>li.cont03{width: 50%;border-radius:0 20px 0 0 ;}
+.content>ul>li.cont04{background: #4c4c4a;}
 .content>ul>li.cont05{background: #ea4c89;}
 .content>ul>li.cont06{width: 50%;}
-.content>ul>li.cont07{height:630px}
+.content>ul>li.cont07{height:630px;border-left: 1px solid #dcdcdc;border-radius:0 0 0 20px}
 .content>ul>li.cont08{width: 50%;}
-.content>ul>li.cont09{background: #ea4c89;}
-.content>ul>li.cont10{background: #69dc83;}
-.content>ul>li.cont11{width: 50%;}
+.content>ul>li.cont09{background: #69dc83; }
+.content>ul>li.cont10{background: #4c4c4a;;}
+.content>ul>li.cont11{width: 50%;border-radius:0 0 20px 0;}
 
 /*content cell*/
 .content li{}
 .content li p{font-size: 26px}
 .content li a:hover{transform: scale(1.3);} 	
-.content li.jpg:hover{opacity: 0.8;color: #000;}
+.content li.jpg:hover{opacity: 0.8;border: 1px solid #fff;}
 
 
 
@@ -112,7 +113,7 @@ _.sliderWrap .slider_txt h3:after{
 .content li.cont05 a,
 .content li.cont09 a,
 .content li.cont10 a
-{text-align: center;display: block;height: 100%;padding-top: 85px;}
+{text-align: center;display: block;height: 100%;padding-top: 100px;}
 
 .content li.cont01 img,
 .content li.cont04 img,
@@ -129,18 +130,22 @@ _.sliderWrap .slider_txt h3:after{
 	background-color: #fff;margin: 20px 0;
 }
 .content div.txt p{font-size: 1.3em;}
-
+.content .cont07 div.txt h3:after{
+	content: "";display: block;width: 50px;height: 2px;
+	background-color:#4c4c4a;margin: 20px 0;
+}
 
 /* modal */
 .content .cont02 .bgImg{transition:0.3s;}
 .content .cont02:hover .bgImg{transform:scale(1.2);}
-.content .cont02 .play{
+.content .cont02:hover .play{display: block;}
+.content .cont02 .play{width: 30px;height: 50px;
 	position: absolute;left: 50%;top: 50%;
-	transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);display: none;
 }
 
 /*news slider*/
-.content .cont03{}
+.content .cont03{border-top: 1px solid #dcdcdc;}
 .content .cont03 h2{position: absolute;top: 40px;left: 40px;}
 .content .sliderWrap{width: 630px;height: 315px;}
 .content .sliderWrap li.news{width: 630px;height: 315px;}
@@ -175,17 +180,18 @@ _.sliderWrap .slider_txt h3:after{
 }
 .container .section>p{text-align: center;font-size: 1.5em;margin-bottom: 100px;}
 .container .section li{
-	float: left;margin-right: 20px;width: 300px;height: 300px;background-color:rgba(100,129,205,0.9);
-	padding-top: 70px;border-radius: 150px;transition: 0.3s;
+	float: left;margin-right: 73px;width: 260px;height: 260px;background-color:rgba(255,255,255,0.7);
+	padding-top: 50px;border-radius: 20px;transition: 0.3s;_background: #fff;
 
 }
+.container .section li:last-child{margin-right:none;}
 
-.container .section li:hover{box-shadow: 5px 5px 5px rgba(161,161,161,0.5);transform: translateY(-30px)} 
+.container .section li:hover{_box-shadow: 5px 5px 5px rgba(161,161,161,0.5);transform: translateY(-20px);border-radius:150px;} 
 	                        /*박스섀도우 x,y,섀도우값,음영                / 트랜스폼-위치 이동*/
 .container .section li:last-child{margin-right: 0;}
 .container .section li img{display: block;margin: 0 auto;}
 .container .section li .card_body{text-align: center;padding: 20px 40px;}
-.container .card_body h3{margin-bottom: 10px;}
+.container .card_body h2{margin-bottom: 10px;color: #4c4c4a;}
 
 /* container02 */
 .container02{
@@ -195,13 +201,13 @@ _.sliderWrap .slider_txt h3:after{
 .container02 .section02{width: 1260px;margin: 0 auto;}
 .container02 h1{text-align: center;}
 .container02 h1:after{
-	content: "";display: block;width: 50px;height: 3px;background-color: #000;
+	content: "";display: block;width: 50px;height: 3px;background-color: #ea4c89;
 	margin: 20px auto;
 }
 .container02 .section02>p{text-align: center;font-size: 1.5em;margin-bottom: 100px;}
 .container02 .section02 li{position: relative;
-	float: left;margin-right: 20px;width: 280px;height: 400px;background-color:rgba(100,129,205,0.9);
-	padding-top: 70px;border-radius:0px;transition: 0.3s;
+	float: left;margin-right: 20px;width: 300px;height: 400px;background-color:rgba(100,129,205,0.9);
+	padding-top: 50px;border-radius:0px;transition: 0.3s;border-radius: 10px;
 
 }
 .container02 .section02 li:hover{box-shadow: 10px 10px 15px rgba(0,0,0,0.8);transition: 0.3s}
@@ -214,3 +220,61 @@ _.sliderWrap .slider_txt h3:after{
 .container02 .card_body h3{margin-bottom: 10px;}
 .container02 .card_body p{font-size: 70px;font-weight: bold;}
 .container02 .card_body p span{font-size: 16px}
+
+
+/* contaner03 */
+.container03{width: 1260px;;height:250px;_background: yellow;margin: 0 auto;margin-top: 100px;}
+.container03 li{float: left;width: 50%;height: 200px;_border: 1px solid #000;}
+.container03 li:first-child{background: #bec6dc;}
+.container03 li:nth-child(2){background: #a1a1a1;}
+.container03 .cswrap{width: 200px;height: 200px;_border: 1px solid #000;margin-left: 30px;position: relative;}
+.container03 li p{font-size: 2em;font-weight: bold;margin-top: 20px;text-align: center;color: #fff;}
+.container03 li div.btn01,
+.container03 li div.btn02
+{display: block;width: 150px;height: 50px;
+	background: #3f5181;border-radius: 30px;text-align: center;;
+	line-height: 50px;color: #fff;position: absolute;bottom: 70px;
+	left: 50%;transform: translate(-50%);
+}
+.container03 li div.btn01:hover{
+	background: #fff;color: #3f5181;border: 1px solid #3f5181;
+	cursor: pointer;
+}
+.container03 li:nth-child(1){position: relative;}
+.container03 li img.qna{position: absolute;height: 170px;bottom: 10px;right: 30px;}
+
+.container03 li div.btn02:hover{
+	background: #fff;color: #3f5181;border: 1px solid #3f5181;
+	cursor: pointer;
+}
+.container03 li:nth-child(2){position: relative;}
+.container03 li img.carrer{position: absolute;height: 220px;bottom: 0;right: 30px;}
+
+/* footer */
+.footerWrap{width: 100%;background: #14191f;}
+footer{
+	width: 1260px;height: 200px;_background: grey; margin: 0 auto;position: relative;margin-bottom: 30px;
+	color: #d1d6da;
+}
+
+footer ul li{float: left;position: absolute;margin: 30px 20px;}
+footer li.left{}
+footer li.left span{color: red;}
+footer li.left address{margin-top: 0px;font-style:normal;}
+footer li.right{position: absolute;right: 0;}
+footer li.right
+
+/*스크롤*/
+
+.top img{position: fixed;width: 70px;height: 70px;
+      right: 50px;bottom: 50px;
+      border-radius:10px;
+      animation:viewTop 1s infinite alternate;
+      opacity:1; transiton 0.3s;cursor: pointer;
+  }
+.top.view{opacity:1}
+
+  @keyframes viewTop{
+    from{transform:translateY(-30px)}
+    to{transform:translateY(0)}
+  }
