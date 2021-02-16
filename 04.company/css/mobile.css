@@ -1,14 +1,22 @@
 @charset "utf-8";
-html,body{height: 100%;font-family: NanumSquareRound,Gulim}
-header#main_header{height: 1950px;position: relative;margin-bottom: 100px;}
+html,body{height: 100%;} //모바일일 경우 꼭필요
+header#main_header{}
+
+/*header top*/
+#header_top{
+	width: 100%;
+	position: fixed;
+	top:0;z-index:99999;
+	background:#fff;
+}
 
 /*헤더*/
 #header_top{
 	width:100%;background:rgb(0,0,0,0.6);height: 80px;
-	position: fixed;;z-index:10000;top: 30px;
+	_position: fixed;;z-index:10000;top: 30px;
 }
 #header_top .logo{
-	position: absolute;top: 15px;}
+	position: fixed;top: 15px;}
 #header_top .logo img{display: block;margin: 0 auto;height: 20px;margin-top: 15px;}
 
 /*메인메뉴*/
@@ -18,7 +26,7 @@ header#main_header{height: 1950px;position: relative;margin-bottom: 100px;}
 	left:50%;transform:translateX(-50%);
 	}
 #main_menu ul{float: right;}
-#main_menu li{float:left;width: 160px;}
+#main_menu li{_float:left;width: 160px;}
 #main_menu li a{
 	height: 80px;padding: 20px 20px;
 	display: block;
@@ -32,10 +40,29 @@ header#main_header{height: 1950px;position: relative;margin-bottom: 100px;}
 
 #main_menu li a:hover{color: #69dc83;}
 
+
+.toggleMenu{
+	display: block;position: absolute;top:5px;right:10px;
+	width: 40px;height: 40px;_background-color:pink;
+	cursor:pointer;
+}
+.toggleMenu div{
+	width: 25px;height: 4px;background:#f00;
+	border-radius:2px;position: absolute;left:7.5px;
+}
+.toggleMenu .bar1{top:10px;}
+.toggleMenu .bar2{top:18px;}
+.toggleMenu .bar3{bottom:10px;}
+
+.toggleMenu.change .bar1{transform:rotate(-45deg);top:18px;background:white;}
+.toggleMenu.change .bar2{opacity:0;}
+.toggleMenu.change .bar3{transform:rotate(45deg);top:18px;background:white}
+
+
 /*서브메뉴*/
 .submenu{display: none;_float: none;}
 .submenu{width: 100%;background:rgb(0,0,0,0.6);}
-.submenu li{font-size: 13px;height: 65px;}
+.submenu li{font-size: 13px;height: 65px;display:none;}
 .submenu li:hover{background-color:white;display: block;color: #000;}
 .submenu a{
 	display: block;
@@ -101,17 +128,17 @@ _.sliderWrap .slider_txt h3:after{
 .content>ul>li a{color: white;transition: 0.5s;}
 
 /* content layout */
-.content>ul>li.cont01{_background: #69dc83;border-radius: 20px 0 0 0 ;}
-.content>ul>li.cont02{}
-.content>ul>li.cont03{width: 50%;border-radius:0 20px 0 0 ;}
-.content>ul>li.cont04{background: #4c4c4a;}
-.content>ul>li.cont05{background: #ea4c89;}
-.content>ul>li.cont06{width: 50%;}
+.content>ul>li.cont01{_background: #69dc83;border-radius: 20px 0 0 0 ;width: 50%;}
+.content>ul>li.cont02{width: 50%;}
+.content>ul>li.cont03{width: 50%;border-radius:0 20px 0 0 ;display: none;}
+.content>ul>li.cont04{background: #4c4c4a;width: 50%;}
+.content>ul>li.cont05{background: #ea4c89;width: 50%;}
+.content>ul>li.cont06{width: 50%;display: none;}
 .content>ul>li.cont07{height:630px;border-left: 1px solid #dcdcdc;border-radius:0 0 0 20px}
-.content>ul>li.cont08{width: 50%;}
-.content>ul>li.cont09{background: #69dc83; }
-.content>ul>li.cont10{background: #4c4c4a;;}
-.content>ul>li.cont11{width: 50%;border-radius:0 0 20px 0;}
+.content>ul>li.cont08{width: 50%;display: block;}
+.content>ul>li.cont09{background: #69dc83;display: none;}
+.content>ul>li.cont10{background: #4c4c4a;display: none;}
+.content>ul>li.cont11{width: 50%;border-radius:0 0 20px 0;display: none;}
 
 /*content cell*/
 .content li{}
@@ -182,7 +209,7 @@ _.sliderWrap .slider_txt h3:after{
 
 
 /* container */
-.container{
+.container{display: none;
 	height: 750px;
 	background:url(../images/contentsbg01_.jpg) no-repeat center fixed;
 	background-size: cover;color: white;padding-top: 70px;
@@ -209,7 +236,7 @@ _.sliderWrap .slider_txt h3:after{
 .container .card_body h2{margin-bottom: 10px;color: #4c4c4a;}
 
 /* container02 */
-.container02{
+.container02{display: none;
 	height: 750px;padding-top: 70px;
 	background-color: #f6f9fe;
 }
@@ -238,12 +265,12 @@ _.sliderWrap .slider_txt h3:after{
 
 
 /* contaner03 */
-.container03{width: 1260px;;height:250px;_background: yellow;margin: 0 auto;margin-top: 100px;}
-.container03 li{float: left;width: 50%;height: 200px;_border: 1px solid #000;}
+.container03{width: 100%;;height:250px;_background: yellow;margin: 0 auto;margin-top: 100px;}
+.container03 li{_float: left;width: 100%;height: 200px;_border: 1px solid #000;}
 .container03 li:first-child{background: #bec6dc;}
-.container03 li:nth-child(2){background: #a1a1a1;}
+.container03 li:nth-child(2){background: #a1a1a1;display: none;}
 .container03 .cswrap{width: 200px;height: 200px;_border: 1px solid #000;margin-left: 30px;position: relative;}
-.container03 li p{font-size: 2em;font-weight: bold;margin-top: 20px;text-align: center;color: #fff;}
+.container03 li p{font-size: 2em;font-weight: bold;margin-top: 0px;text-align: center;color: #fff;}
 .container03 li div.btn01,
 .container03 li div.btn02
 {display: block;width: 150px;height: 50px;
@@ -255,8 +282,8 @@ _.sliderWrap .slider_txt h3:after{
 	background: #fff;color: #3f5181;border: 1px solid #3f5181;
 	cursor: pointer;
 }
-.container03 li:nth-child(1){position: relative;}
-.container03 li img.qna{position: absolute;height: 170px;bottom: 10px;right: 30px;}
+.container03 li:nth-child(1){position: relative;t20}
+.container03 li img.qna{position: absolute;height: 130px;top: 20px;;right: 30px;}
 
 .container03 li div.btn02:hover{
 	background: #fff;color: #3f5181;border: 1px solid #3f5181;
@@ -268,7 +295,7 @@ _.sliderWrap .slider_txt h3:after{
 /* footer */
 .footerWrap{width: 100%;background: #14191f;}
 footer{
-	width: 1260px;height: 200px;_background: grey; margin: 0 auto;position: relative;margin-bottom: 30px;
+	width:100%;height: 200px;_background: grey; margin: 0 auto;position: relative;_margin-bottom: 30px;
 	color: #d1d6da;
 }
 
@@ -276,12 +303,12 @@ footer ul li{float: left;position: absolute;margin: 30px 20px;}
 footer li.left{}
 footer li.left span{color: red;}
 footer li.left address{margin-top: 0px;font-style:normal;}
-footer li.right{position: absolute;right: 0;}
+footer li.right{position: absolute;right: 0;display: none;}
 footer li.right
 
 /*스크롤*/
 
-.top img{position: fixed;width: 70px;height: 70px;
+/*.top img{position: fixed;width: 70px;height: 70px;
       right: 50px;bottom: 50px;
       border-radius:10px;
       animation:viewTop 1s infinite alternate;
@@ -292,4 +319,4 @@ footer li.right
   @keyframes viewTop{
     from{transform:translateY(-30px)}
     to{transform:translateY(0)}
-  }
+  }*/
