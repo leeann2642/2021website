@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>fullpage</title>
+  <link rel="stylesheet" href="css/fullpage.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/jquery.fullpage.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Jua&family=Montserrat+Alternates:wght@600&family=Montserrat:wght@500&display=swap');
+
+/*body{font-family: 'Montserrat Alternates', sans-serif;}*/
+body{font-family: 'Josefin Sans', sans-serif;}
+</style>
+
+  <style>
+    nav#navTop{
+      position: fixed;background: #fff;
+      width: 100%;height: 58px;padding-left: 10px;z-index:1
+    }
+    nav#navTop li{float: left;width: 200px;margin-top: 1px;}
+    nav#navTop li a{font-size: 1.3em;
+      display: block;line-height:55px;text-align: center;
+      padding: 0 17px;
+    }
+    nav#navTop li.active{background-color:olive;}
+    nav#navTop li.active a{color:white}
+    nav#navTop li:hover a{border-bottom: 2px solid olive;margin-bottom:1px;}
+
+    nav#navTop .logo{width: 150px;height: 40px;margin-top: 15px;margin-left: 20px;}
+    nav#navTop .logo img{width: 120px;height: 30px;}
+
+    nav#navTop>ul>li{transition: 0.3s;}
+    nav#navTop>ul>li .submenu{position: absolute;
+      width:600px;height: 50px; text-align: center;float: left;display: none;
+      background: #dcdcdc;line-height: 50px;
+    }
+    nav#navTop>ul>li:hover .submenu{display: block;}
+
+    .section,.slide{
+      background-position: center;
+      background-repeat: no-repeat;
+      -webkit-background-size: cover;
+      background-size: cover;
+    }
+
+  /*  top icon*/
+    nav#navTop div.icon{position: absolute;right: 50px;text-align: center;margin-top: 10px;}
+
+
+    .section.page1{background-image: url(images/bg01.jpg);}
+    .section.page2{_background-color :#da541f; background-image: url(images/slide04.jpg);}
+    .section.page3{background-image: url(images/bg03.jpg);}
+    .section.page4{background-color :#9adbe8;}
+
+    #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #4caf50;}
+
+
+    .main{
+      width: 600px;position: absolute;top:50%;
+      transform:translateY(-50%)
+    }
+
+    .main.two{
+      left:200px;
+    }
+
+    .main.one{
+      right:200px;
+    }
+    .main.three{
+      right:200px;
+    }
+
+    .main h3{font-size:3em}
+    .main p{margin-bottom: 20px;font-size:2em; padding-top: 20px;}
+    .main a{
+      display: block;text-align: center;width: 150px;
+      border: 1px solid #fff;line-height:40px;
+      border-radius:20px;color:white;transition:0.3s
+    }
+    .main a:hover{background-color: #fff;color:#000}
+
+   /* 2st txt*/
+    #onView2st{left:-600px;transition:0.3s;color: #fff;}
+    #onView2st.move{left: 200px;}
+  /*2st product1*/
+    #onView2st_p1{position: absolute;right:-400px;bottom: 10px;transition:1s;}
+    #onView2st_p1.move{right: 450px;}
+     /*2st product2*/
+    #onView2st_p2{position: absolute;right:-400px;bottom: 10px;transition:2s;}
+    #onView2st_p2.move{right: 100px;}
+
+
+    /* 3st txt*/
+    #onView3st{top: 300px;right:-600px;transition:0.3s}
+    #onView3st.move{top: 300px;right: 200px;}
+    /*3st product2*/
+    #onView3st_p1{position: absolute;bottom:-800px;;transition:1s}
+    #onView3st_p1.move{right: 100px;bottom: -20px}
+
+  /*  #onView3st_p2{position: absolute;bottom:-400px;r10;transition:1s}
+    #onView3st_p2.move{bottom: 150px;}
+*/
+
+
+    .scroll img{width: 50px;height: 50px;}
+    .scroll{
+      position: absolute;bottom: 20px;left: 50%;transform:translateX(-50%);
+      animation-name:xScroll;
+      animation-duration:0.8s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+    @keyframes xScroll {
+      from{bottom:20px}
+      to{bottom: 40px;}
+    }
+
+
+/*    #onView3st_p1,#onView2st_p1,#onView2st_p2{
+      position: absolute;bottom: 0px;
+      animation-name:xScroll;
+      animation-duration:1s;
+      animation-iteration-count:infinite;
+      animation-direction:alternate;
+    }
+    @keyframes xScroll {
+      from{bottom:0px}
+      to{bottom: 30px;}
+    }
+*/
+
+
+    
+
+    .page4 .slide{text-align: center;color: #fff;font-size: 2em;}
+    .page4 .slide.s01{background-image: url(images/slide02.jpg);}
+    .page4 .slide.s02{background-image: url(images/slide01.jpg);}
+    .page4 .slide.s03{background-image: url(images/slide03.jpg);}
+    .page4 .slide.s04{background-image: url(images/bg02.jpg);}
+
+    .page4 .slide h1{opacity: 0;transition: 0.3s}
+    .page4 .slide:hover h1{opacity: 1;}
+    /*video*/
+    body{height: 100%;}
+    .vWrap{
+      width: 100%;_height: 300px;
+      background: pink;position: relative;
+    }
+    .vWrap h3{width: 100%;position: absolute;top: 50px;text-align: center;color: #fff;}
+    #myVideo{
+      width: 100%;height: 100%;
+      object-fit:cover; /*크기에 맞춤*/
+    }
+
+
+    .fp-controlArrow.fp-prev {
+    left: 25px;
+    border-width: 30px 20px 30px 10px;
+    border-color: transparent #009688a8 transparent transparent;
+}
+
+  .fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 30px 0 30px 20px;
+    border-color: transparent transparent transparent #009688a8;
+}
+.section.page2 h1{text-align: center;padding: 50px,50px;}
+       img {
+        -webkit-filter: drop-shadow(5px 5px 5px #666666);
+        filter: drop-shadow(0px 10px 10px #dcdcdc);
+      }
+  </style>
+  <script>
+    $(function(){
+      $("#fullpage").fullpage({
+        menu:"#topMenu", //메뉴지정
+        anchors:["m1st","m2st","m3st","m4st","m5st"],
+        navigation:true,
+        afterLoad:function(anchorslink,index){
+          console.log(anchorslink+','+index);
+
+
+          if(index == 2){
+            $("#onView2st,#onView2st_p1,#onView2st_p2").addClass("move");
+          }else{
+            $("#onView2st,#onView2st_p1,#onView2st_p2").removeClass("move")
+          }
+
+          if(index == 3){
+            $("#onView3st,#onView3st_p1").addClass("move");
+          }else{
+            $("#onView3st,#onView3st_p1").removeClass("move")
+          }
+
+        }
+      });
+    });
+  </script>
+
+</head>
+  <nav id="navTop">
+    <ul class="clearfix" id="topMenu">
+      <a href="index.html"><li class="logo"><img src="images/logo.png" alt=""></li></a>
+      <li data-menuanchor="m1st"><a href="#m1st">Essenstial Oils</a>
+        <ul class="submenu clearfix">
+          <li>Carm collection</li>
+          <li>Sleep collection</li>
+          <li>Energy collection</li>
+        </ul>
+
+
+      </li>
+      <li data-menuanchor="m2st"><a href="#m2st">Mists</a>
+       <ul class="submenu clearfix">
+          <li>sleep home mist</li>
+          <li>Energy mist</li>
+          <li>Passion home mist</li>
+        </ul>
+
+      </li>
+      <li data-menuanchor="m3st"><a href="#m3st">Diffuser</a>
+        <ul class="submenu clearfix">
+          <li>QTY1</li>
+          <li>QTY2</li>
+          <li>QTY3</li>
+        </ul>
+
+      </li>
+      <li data-menuanchor="m4st"><a href="#m4st">About</a>
+        <ul class="submenu clearfix">
+          <li>Our Mission</li>
+          <li>What We Treat</li>
+          <li>Ingredients</li>
+        </ul>
+
+      <li data-menuanchor="m5st"><a href="#m5st">Video</a>
+      </li>
+      <div class="icon">
+<span class="fa-stack fa-lg"> 
+<!-- <i class="fa fa-square-o fa-stack-2x"></i>  -->
+<i class="fa fa-shopping-cart fa-stack-1.5x"></i> 
+</span> 
+<!--fa-twitter on fa-square-o-->
+
+<span class="fa-stack fa-lg"> 
+<!-- <i class="fa fa-circle fa-stack-2x"></i> --> 
+<i class="fa fa-address-card fa-stack-1.5x"></i>
+</span> 
+<!--fa-flag on fa-circle-->
+<span class="fa-stack fa-lg"> 
+<!-- <i class="fa fa-square-o fa-stack-2x"></i>  -->
+<i class="fa fa-search fa-stack-1.5x"></i> 
+</span> 
+</div>
+
+    </ul>
+
+
+  </nav>
+  <div id="fullpage">
+    <!-- section 1st -->
+    <div class="section page1" data-anchor="m1st">
+      <div class="main one">
+        <h3>Keep Carm & Carry On</h3>
+        <p>soft babbling books, gentle breeze sweet rain.</p>
+        <a href="#">Shop now</a>
+      </div>
+      <div class="scroll">
+        <a href="#m2st"><img src="images/btn_scroll02.png" alt=""></a>
+      </div>
+    </div>
+
+    <!-- section 2st -->
+    <div class="section page2" data-anchor="m2st">
+      <div class="main two" id="onView2st">
+        <h3>Spritz A Little Love</h3>
+        <p>Crackling fires, sweet summer air,and wave of carnal energy</p>
+        <a href="#">Shop now</a>
+      </div>
+      <div id="onView2st_p1">  
+        <img src="images/img02_.png" alt="">
+      </div>
+      <div id="onView2st_p2">  
+        <img src="images/img03_.png" alt="">
+      </div>
+      
+    </div>
+
+    <!-- section 3st -->
+    <div class="section page3" data-anchor="m3st">
+      <div class="main three" id="onView3st">
+        <h3>The Sleep You Dream Of</h3>
+        <p>A cool summer night with starry night ans beautiful quite.</p>
+        <a href="#">Shop now</a>
+      </div>
+        <div id="onView3st_p1">  
+         <img src="images/img05.png" alt="">
+      </div>
+<!--        <div id="onView3st_p2">  
+         <img src="images/img05.png" alt="">
+      </div> -->
+    </div>
+
+    <!-- section 4st -->
+    <div class="section page4" data-anchor="m4st">
+      <div class="slide s01"><h1></h1></div>
+      <div class="slide s02"><h1>The Best Essential Oils. Period.
+Our mission is to bring all-natural, sustainably sourced essential oils and homeopathic remedies from around the world to your door. </h1></div>
+      <div class="slide s03"><h1>Our diffuser evenly disperses aroma with our heat-free, ultrasonic technology. Add any Helias essential oil into our diffuser and turn any room into a private spa.</h1></div>
+      <div class="slide s04"><h1>Subscribe for special offers, new products and sales!</h1></div>
+    </div>
+
+     <!-- section 5st -->
+    <div class="section page5" data-anchor="m5st">
+      <div class="vWrap">
+       <video id="myVideo" controls autoplay poster="images/play.jpg"><!-- 크기, 컨트롤, 반복 재생 -->
+        <source src="_images/video.mp4" type="video/mp4" > 
+       </video>
+    </div>
+
+  </div>
+</body>
+</html>
